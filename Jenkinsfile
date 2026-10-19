@@ -2,6 +2,7 @@ pipeline {
     agent any
     
     environment {
+        DOCKER_BUILDKIT = '0'
         IMAGE_NAME = 'nabilaadindra/simple-app'
         REGISTRY_CREDENTIALS = 'dockerhub-credentials'
     }
