@@ -6,8 +6,7 @@ REGISTRY_CREDENTIALS = 'dockerhub-credentials'
 } 
 stages { 
 stage('Checkout') { steps { checkout scm } } 
-stage('Build') { steps { bat 'echo "Build di Windows"' } } 
-stage('Build Docker Image') { 
+stage('Build') { steps { bat 'echo "Build di Windows"' } }  
 stage('Build Docker Image') {
     steps {
         sh "docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} ."
